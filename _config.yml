@@ -9,38 +9,23 @@ description: "Write an awesome description for your new site here. You can edit 
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
-  pic: 1
-  position: Lead Designer
+- name: Sri Handika
+  pic: Seri
+  position: Co-Founder
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
+    
 
-- name: Larry Parker
-  pic: 2
-  position: Lead Marketer
+- name: Gustaf Prameswara
+  pic: Gustaf
+  position: Co-Founder
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: linkedin
-      url: #
+    
 
-- name: Diana Petersen
-  pic: 3
-  position: Lead Developer
+- name: Febri Satri Nanda
+  pic: Febri
+  position: Marketing
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
