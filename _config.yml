@@ -9,10 +9,10 @@ description: "Write an awesome description for your new site here. You can edit 
 
 # Team names, titles and social links
 people:
-- name: Sri Handika
-  pic: Seri
-  position: Co-Founder
-  social:
+# - name: Sri Handika
+#   pic: Seri
+#   position: Co-Founder
+#   social:
     
 
 - name: Gustaf Prameswara
