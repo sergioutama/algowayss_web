@@ -14,21 +14,28 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            {% assign is_home = false %}
+            {% if page.url == "/" or page.url == "/index.html" %}
+              {% assign is_home = true %}
+            {% endif %}
             <ul class="nav navbar-nav navbar-right">
                 <li class="hidden">
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <a {% if is_home %}class="page-scroll" href="#services"{% else %}href="/#services"{% endif %}>Services</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a {% if is_home %}class="page-scroll" href="#about"{% else %}href="/#about"{% endif %}>About</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#team">Team</a>
+                    <a {% if is_home %}class="page-scroll" href="#team"{% else %}href="/#team"{% endif %}>Team</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a href="/blog">Blog</a>
+                </li>
+                <li>
+                    <a {% if is_home %}class="page-scroll" href="#contact"{% else %}href="/#contact"{% endif %}>Contact</a>
                 </li>
             </ul>
         </div>
