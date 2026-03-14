@@ -4,13 +4,16 @@
 {% include head.html %}
 
 
-<body id="page-top" class="{{ page.layout }}">
- 
+<body id="page-top" class="index">
+
   {% include header.html %}
-  {{ content }}
+  {% include services.html %}
+  {% include about.html %} 
+  {% include contact.html %}
   {% include footer.html %}
+  {% include modals.html %}
   {% include js.html %}
- 
+
 </body>
 
 </html>
