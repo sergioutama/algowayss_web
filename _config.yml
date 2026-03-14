@@ -47,4 +47,20 @@ address:
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+
+# Blog Settings
+permalink: /blog/:title/
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Defaults for posts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Algowayss Team"
