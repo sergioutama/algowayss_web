@@ -2,19 +2,319 @@
 layout: default
 ---
 
-<div class="home">
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Algoway System Solution</h1>
+      <p>Building innovative solutions for complex business challenges. Our team combines technical expertise with strategic thinking to deliver measurable results.</p>
+      <div class="hero-actions">
+        <a href="/blog/" class="btn btn-primary">Read Our Insights</a>
+        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <h1>Posts</h1>
+<section class="latest-posts">
+  <div class="container">
+    <div class="section-header">
+      <h2>Latest Insights</h2>
+      <p>Technical case studies and development updates from our team</p>
+    </div>
+    
+    <div class="posts-grid">
+      {% for post in site.posts limit: 3 %}
+      <article class="post-card">
+        <div class="post-card-meta">
+          <time>{{ post.date | date: "%B %d, %Y" }}</time>
+          <span class="badge-{{ post.categories[0] }}">{{ post.categories[0] | replace: '-', ' ' | capitalize }}</span>
+          {% if post.impact %}
+          <span class="impact-{{ post.impact }}">{{ post.impact | capitalize }} Impact</span>
+          {% endif %}
+        </div>
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="post-card-excerpt">
+          {% if post.excerpt %}
+            {{ post.excerpt | strip_html | truncatewords: 20 }}
+          {% else %}
+            {{ post.content | strip_html | truncatewords: 20 }}
+          {% endif %}
+        </p>
+        <a href="{{ post.url }}" class="read-more">Read More &rarr;</a>
+      </article>
+      {% endfor %}
+    </div>
+    
+    <div class="text-center">
+      <a href="/blog/" class="btn btn-outline">View All Posts</a>
+    </div>
+  </div>
+</section>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+<section class="about-preview" id="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Algowayss</h2>
+        <p>We are a team of engineers and problem-solvers dedicated to building reliable, scalable software solutions. Our expertise spans system architecture, cloud infrastructure, data processing, and user experience design.</p>
+        <p>From optimizing audio compression to implementing multi-calendar architectures, we tackle complex challenges with a systematic, results-driven approach. Every project we undertake focuses on delivering measurable business value.</p>
+      </div>
+      <div class="services-list">
+        <h3>Our Services</h3>
+        <ul>
+          <li>Custom Software Development</li>
+          <li>System Architecture & Design</li>
+          <li>Cloud Infrastructure</li>
+          <li>Data Processing & Analytics</li>
+          <li>API Integration</li>
+          <li>Performance Optimization</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<style>
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+}
 
-</div>
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.95;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: white;
+  color: #667eea;
+}
+
+.btn-primary:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.btn-outline {
+  padding: 0.75rem 2rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #667eea;
+  color: #667eea;
+  background: white;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background: #667eea;
+  color: white;
+}
+
+.latest-posts {
+  padding: 4rem 0;
+  background: #f9fafb;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.post-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.post-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+.post-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.badge-case-study {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.badge-dev-log {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.impact-high { color: #dc2626; font-weight: 600; }
+.impact-medium { color: #f59e0b; font-weight: 600; }
+.impact-low { color: #10b981; font-weight: 600; }
+
+.post-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.post-card h3 a {
+  color: #111827;
+  text-decoration: none;
+}
+
+.post-card h3 a:hover {
+  color: #667eea;
+}
+
+.post-card-excerpt {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.about-preview {
+  padding: 4rem 0;
+  background: white;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.about-text p {
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.services-list h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.services-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.services-list li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

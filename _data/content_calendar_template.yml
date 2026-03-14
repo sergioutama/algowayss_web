@@ -1,0 +1,40 @@
+# Content Calendar Configuration
+
+calendar:
+  year: 2026
+  quarter: Q1-Q2
+  
+schedule:
+  frequency: bi-weekly  # Options: weekly, bi-weekly, monthly
+  publication_day: Wednesday
+  publication_time: "09:00 EST"
+  
+# Calendar Entry Template
+entry_template:
+  week: ""
+  date: ""
+  type: ""           # case-study, dev-log, announcement, retrospective
+  topic: ""
+  impact: ""         # high, medium, low
+  source: ""
+  author: ""
+  status: ""         # draft, review, approved, published
+  notes: ""
+
+# Monthly Planning Template
+monthly_template:
+  month: ""
+  total_posts: 4
+  posts:
+    - week: 1
+      type: case-study
+      impact: high
+    - week: 2
+      type: dev-log
+      impact: medium
+    - week: 3
+      type: case-study
+      impact: high
+    - week: 4
+      type: dev-log
+      impact: medium
