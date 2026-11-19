@@ -72,13 +72,14 @@ nav a:hover, .text-link:hover, .foot a:hover, .entry a:hover { color: var(--red)
 .clients { border-block: 1px solid var(--line); }
 .client-inner { min-height: 106px; display: flex; align-items: center; gap: clamp(30px,5vw,84px); }
 .clients .eyebrow { color: var(--muted); flex-shrink: 0; letter-spacing: .12em; }
-.clients ul { flex: 1; padding: 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 24px; list-style: none; }
-.clients li { font: 400 clamp(19px,1.8vw,29px)/1.1 var(--serif); }
+.clients ul { flex: 1; padding: 16px 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; justify-items: center; gap: 12px 22px; list-style: none; }
+.clients li { font: 400 clamp(21px,1.8vw,29px)/1.1 var(--serif); text-align: center; }
+.clients li img { display: block; max-width: 100%; height: auto; }
 .section { padding-block: clamp(76px,8vw,128px); }
 .split { display: grid; grid-template-columns: .86fr 1.14fr; gap: 8%; align-items: start; }
 .section h2, .contact h2 { margin-top: 23px; }
-.section-intro > p:last-child, .disclosures p, .approach li p, .entry p, .prose p { color: var(--muted); }
-.section-intro > p:last-child { margin-top: 24px; max-width: 380px; }
+.section-intro > p:not(.eyebrow), .disclosures p, .approach li p, .entry p, .prose p { color: var(--muted); }
+.section-intro > p:not(.eyebrow) { margin-top: 24px; max-width: 380px; }
 .disclosures { border-top: 1px solid var(--ink); }
 .disclosures details { border-bottom: 1px solid var(--line); }
 .disclosures summary { cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; list-style: none; font: 400 clamp(25px,2.25vw,37px)/1.2 var(--serif); }
@@ -138,7 +139,7 @@ nav a:hover, .text-link:hover, .foot a:hover, .entry a:hover { color: var(--red)
   .hero h1 { font-size: clamp(54px,7.55vw,72px); }
   .hero-art { left: 52%; }
   .client-inner { gap: 30px; }
-  .clients ul { display: grid; grid-template-columns: 1fr 1.25fr; }
+  .clients ul { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .split { gap: 6%; }
   .case-grid { gap: 25px; }
 }
@@ -160,13 +161,13 @@ nav a:hover, .text-link:hover, .foot a:hover, .entry a:hover { color: var(--red)
   .hero-art img { object-position: center 46%; }
   .client-inner { padding-block: 22px; display: block; }
   .clients .eyebrow br { display: none; }
-  .clients ul { margin-top: 13px; gap: 10px 15px; }
+  .clients ul { margin-top: 16px; padding: 0; gap: 18px 15px; }
   .clients li { font-size: clamp(18px,4.5vw,24px); }
   .split, .feature, .case-grid { grid-template-columns: 1fr; }
   .section { padding-block: 58px; }
   .split { gap: 30px; }
   .section h2, .contact h2 { margin-top: 15px; }
-  .section-intro > p:last-child { margin-top: 17px; }
+  .section-intro > p:not(.eyebrow) { margin-top: 17px; }
   .disclosures summary { padding-block: 18px; }
   .feature { gap: 18px; margin-top: 25px; }
   .case-grid { gap: 25px; margin-top: 25px; }
