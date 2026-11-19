@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html>
-
-{% include head.html %}
-
-
-<body id="page-top" class="index">
-
-  {% include header.html %}
-  {% include services.html %}
-  {% include about.html %} 
-  {% include blog_preview.html %}
-  {% include contact.html %}
-  {% include footer.html %}
-  {% include modals.html %}
-  {% include js.html %}
-
-</body>
-
+<!doctype html>
+<html lang="en">
+  {% include head.html %}
+  <body id="page-top">
+    <a class="skip" href="#main">Skip to content</a>
+    {% include header.html %}
+    <main id="main">{{ content }}</main>
+    {% include footer.html %}
+  </body>
 </html>
