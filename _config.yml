@@ -2,7 +2,7 @@ title: PT Algoway System Solution
 description: "Algoway is a technology consultancy in Bogor, Indonesia. We design regulatory reporting systems, organise financial data and build software for the people who use it."
 url: "https://www.algowayss.com"
 baseurl: ""
-email: sergio@algowayss.co
+contact_endpoint: ""
 permalink: pretty
 timezone: Asia/Jakarta
 exclude:
