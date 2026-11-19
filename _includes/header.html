@@ -1,61 +1,15 @@
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top">{{site.title}}</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            {% assign is_home = false %}
-            {% if page.url == "/" or page.url == "/index.html" %}
-              {% assign is_home = true %}
-            {% endif %}
-            <ul class="nav navbar-nav navbar-right">
-                <li class="hidden">
-                    <a href="#page-top"></a>
-                </li>
-                <li>
-                    <a {% if is_home %}class="page-scroll" href="#services"{% else %}href="/#services"{% endif %}>Services</a>
-                </li>
-                <li>
-                    <a {% if is_home %}class="page-scroll" href="#about"{% else %}href="/#about"{% endif %}>About</a>
-                </li>
-                <li>
-                    <a {% if is_home %}class="page-scroll" href="#team"{% else %}href="/#team"{% endif %}>Team</a>
-                </li>
-                <li>
-                    <a href="/blog">Blog</a>
-                </li>
-                <li>
-                    <a {% if is_home %}class="page-scroll" href="#contact"{% else %}href="/#contact"{% endif %}>Contact</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-
-<!-- Header -->
-<header>
-    <div class="container">
-        <div class="intro-text">
-            <div class="intro-lead-in">Welcome To Algowayss!</div>
-            <div class="intro-heading">It's Nice To Meet You</div>
-            <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
-        </div>
-    </div>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Algoway System Solution home">
+      <img src="{{ '/assets/images/algoway.png' | relative_url }}" alt="" width="32" height="41">
+      <span>Algoway<small>System Solution</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}#services">Services</a>
+      <a href="{{ '/' | relative_url }}#work">Selected work</a>
+      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a href="{{ '/blog/' | relative_url }}">Insights</a>
+    </nav>
+    <a class="header-contact" href="{{ '/' | relative_url }}#contact">Get in touch <span aria-hidden="true">↗</span></a>
+  </div>
 </header>
-<!--
-        {% for page in site.pages %}
-          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
-        {% endfor %}
- -->

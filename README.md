@@ -1,30 +1,33 @@
-Agency Jekyll theme
-====================
+# PT Algoway System Solution
 
-Agency theme based on [Agency bootstrap theme ](https://startbootstrap.com/template-overviews/agency/)
+Jekyll source for [www.algowayss.com](https://www.algowayss.com/).
 
-# How to use
+## Local development
 
-###Portfolio 
+Use the Ruby version in `.ruby-version`. Run `bundle install`, then
+`bundle exec jekyll serve` and open <http://localhost:4000>.
+To reproduce the production build, run
+`JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter`.
 
-Portfolio projects are in '/_posts'
+The homepage is in `index.html`, articles are in `_posts/`, and the
+Formspree form ID and canonical domain are in `_config.yml`.
 
-Images are in '/img/portfolio'
+## Contact form
 
-###About
+Create a form in the [Formspree dashboard](https://formspree.io/forms) and
+select the inbox that should receive enquiries. In the form’s Integration tab,
+copy the ID at the end of the endpoint URL into `formspree_form_id` in
+`_config.yml`. Rebuild the site after setting the ID.
 
-Images are in '/img/about/'
+The form sends the visitor’s name, email, phone and message directly to
+Formspree using an HTML POST. Formspree displays the submission result and
+manages notification delivery. The draft disables submission while the ID is
+empty. The recipient address belongs in Formspree’s settings.
 
-###Team
+## GitHub Pages
 
-Team members and info are in '_config.yml'
-
-Images are in '/img/team/'
-
-
-# Demo
-
-View this jekyll theme in action [here](https://y7kim.github.io/agency-jekyll-theme)
-
-=========
-For more details, read [documentation](http://jekyllrb.com/)
+For the first release, select **Settings → Pages → Build and deployment →
+Source → GitHub Actions**. The workflow builds pull requests with the locked
+Jekyll dependencies. A push to `master` builds and publishes `_site/`.
+The workflow can also be run manually from `master`.
+The custom domain is `www.algowayss.com`.
