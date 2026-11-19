@@ -1,13 +1,14 @@
 <section class="contact" id="contact" aria-labelledby="contact-title">
   <div class="wrap contact-inner">
     <div><p class="eyebrow ruled">Get in touch</p><h2 id="contact-title">Discuss your <em>project.</em></h2></div>
-    <form name="sentMessage" id="contactForm" class="contact-form" method="post" {% if site.contact_endpoint != empty %}action="{{ site.contact_endpoint | escape }}"{% endif %}>
+    {% assign form_id = site.formspree_form_id | default: '' | strip %}
+    <form name="sentMessage" id="contactForm" class="contact-form" method="post" {% if form_id != empty %}action="https://formspree.io/f/{{ form_id | url_encode }}"{% endif %}>
       <label for="name">Your name<input id="name" name="name" autocomplete="name" maxlength="160" required></label>
       <label for="email">Email address<input type="email" id="email" name="email" autocomplete="email" maxlength="254" required></label>
       <label for="phone" class="wide">Phone number<input type="tel" id="phone" name="phone" autocomplete="tel" maxlength="64" required></label>
       <label for="message" class="wide">How can we help?<textarea id="message" name="message" rows="4" maxlength="6000" required></textarea></label>
-      <button class="button wide" type="submit"{% if site.contact_endpoint == empty %} disabled{% endif %}>Send message <span aria-hidden="true">↗</span></button>
-      {% if site.contact_endpoint == empty %}<p class="wide">This preview does not accept messages yet.</p>{% endif %}
+      <button class="button wide" type="submit"{% if form_id == empty %} disabled{% endif %}>Send message <span aria-hidden="true">↗</span></button>
+      {% if form_id == empty %}<p class="wide">This preview does not accept messages yet.</p>{% endif %}
     </form>
   </div>
 </section>

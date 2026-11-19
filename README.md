@@ -10,15 +10,19 @@ To reproduce the production build, run
 `JEKYLL_ENV=production bundle exec jekyll build --strict_front_matter`.
 
 The homepage is in `index.html`, articles are in `_posts/`, and the
-contact form endpoint and canonical domain are in `_config.yml`.
+Formspree form ID and canonical domain are in `_config.yml`.
 
 ## Contact form
 
-Set `contact_endpoint` in `_config.yml` to the public HTTPS URL that accepts
-enquiries. The form posts `name`, `email`, `phone` and `message` as standard
-HTML form data. The endpoint handles delivery and displays the result to the
-visitor. Configure the recipient privately with the backend. The preview
-disables submission while the endpoint is blank.
+Create a form in the [Formspree dashboard](https://formspree.io/forms) and
+select the inbox that should receive enquiries. In the form’s Integration tab,
+copy the ID at the end of the endpoint URL into `formspree_form_id` in
+`_config.yml`. Rebuild the site after setting the ID.
+
+The form sends the visitor’s name, email, phone and message directly to
+Formspree using an HTML POST. Formspree displays the submission result and
+manages notification delivery. The draft disables submission while the ID is
+empty. The recipient address belongs in Formspree’s settings.
 
 ## GitHub Pages
 
