@@ -4,7 +4,7 @@ title: "XBRL Taxonomy Architectures"
 date: 2026-03-23
 category: Blog
 description: "An explanation of simple, tuple, and dimensional XBRL taxonomy architectures as background to LSMK's hybrid approach."
-excerpt: "There are 3 types of XBRL architecture: simple, tuple, and dimensional architecture. Instead of using one of that type of architecture, LSMK implement using “The Hybrid” architecture. Hybrid means the taxonomy architecture combine both dimensional and tuple concept. Before i explain why implement with this “new one” architecture, i will explain to you about the three architecture i mentioned."
+excerpt: "There are 3 types of XBRL architecture: simple, tuple, and dimensional architecture. Instead of using one of that type of architecture, LSMK implement using “The Hybrid” architecture."
 original_url: "https://geexbrl.wordpress.com/2014/02/12/xbrl-taxonomy-architectures/"
 original_date: 2014-02-12
 ---

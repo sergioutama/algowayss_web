@@ -4,7 +4,7 @@ title: "Instance Generator Excel Add-Ins (A Learning Tools for Creating Instance
 date: 2026-03-30
 category: Blog
 description: "Overview of a Microsoft Excel Add-In learning tool built to generate XBRL instance documents compatible with OJK's taxonomy."
-excerpt: "In order to help filler in understanding about how to create report in XBRL format, we have created a Microsoft Excel Add-in to help filler to convert their report into XBRL. This add ins is create to be fit to work with OJK’s Taxonomy. It will work under .NET 4.0 and need MS. Visual Studio tools for Office Runtime 2010."
+excerpt: "In order to help filler in understanding about how to create report in XBRL format, we have created a Microsoft Excel Add-in to help filler to convert their report into XBRL."
 original_url: "https://geexbrl.wordpress.com/2015/11/30/instance-generator-excel-add-ins-a-learning-tools-for-creating-instance-documents/"
 original_date: 2015-11-30
 ---

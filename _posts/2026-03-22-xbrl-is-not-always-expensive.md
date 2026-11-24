@@ -4,7 +4,7 @@ title: "XBRL is not always EXPENSIVE"
 date: 2026-03-22
 category: Blog
 description: "An overview of the four components needed to produce XBRL instance documents and how careful tool selection can keep implementation costs low."
-excerpt: "When i discuss about using XBRL as reporting technology, most of reporting entity told me about how expensive the implementation is. Actually, building XBRL Reporting System is not always required a quite amount of money. You need to be careful in deciding what kind of tools will be used."
+excerpt: "When i discuss about using XBRL as reporting technology, most of reporting entity told me about how expensive the implementation is."
 original_url: "https://geexbrl.wordpress.com/2013/09/30/xbrl-is-not-always-expensive/"
 original_date: 2013-09-30
 ---

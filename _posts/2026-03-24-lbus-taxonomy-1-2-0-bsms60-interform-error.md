@@ -4,7 +4,7 @@ title: "LBUS Taxonomy 1.2.0 BSMS60 Interform Validation Error"
 date: 2026-03-24
 category: Blog
 description: "An explanation of an interform validation error on LBUS Taxonomy 1.2.0 Form 13 (BSMS60) caused by a shared general filter and how the regulator must resolve it."
-excerpt: "Hello,,, nice to see you again 🙂"
+excerpt: "Today some of syaria bank on LSMK, complain with form 13 (BSMS60). They have problem about RRA_IF_CekJmlBlnLap_PembyBgHsl_Rp and RRA_IF_CekJmlBlnLap_PembyBgHsl_Valas."
 original_url: "https://geexbrl.wordpress.com/2014/05/14/lbus-taxonomy-1-2-0-bsms60-interform-error/"
 original_date: 2014-05-14
 ---

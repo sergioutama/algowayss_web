@@ -4,7 +4,7 @@ title: "XBRL Schema vs Database Schema (Could it be Converted into Each Other?)"
 date: 2026-03-31
 category: Blog
 description: "An introduction to mapping XBRL taxonomy metadata and linkbases into a compliant database or datamart schema."
-excerpt: "Hi, all. Since there are so many company in Financing (Multi-finance) Industry wondering how to create the database/datamart that could meet very well with the data requirements stated in XBRL Taxonomy. So, before we got to the point how to matches your databases with XBRL instance documents, let me explain how XBRL working on your report. You can also read my article before."
+excerpt: "Hi, all. Since there are so many company in Financing (Multi-finance) Industry wondering how to create the database/datamart that could meet very well with the data requirements stated in XBRL Taxonomy."
 original_url: "https://geexbrl.wordpress.com/2015/12/16/xml-schema-vs-database-schema-could-it-be-converted-into-each-other/"
 original_date: 2015-12-16
 ---
