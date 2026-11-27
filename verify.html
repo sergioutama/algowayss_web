@@ -1,0 +1,93 @@
+---
+layout: default
+title: "Verify Algoway documents"
+description: "How to confirm that a document really comes from PT Algoway System Solution."
+permalink: /verify/
+---
+<section class="wrap reading verify-page">
+  <p class="eyebrow ruled">Trust &amp; verification</p>
+  <h1>Verify Algoway documents</h1>
+  <p class="intro">{{ page.description }}</p>
+  <div class="prose">
+    <p>Official Algoway documents (proposals, contracts, reports) are digitally signed with the GPG key below so recipients can verify both authenticity and integrity.</p>
+  </div>
+
+  <section class="entry" aria-labelledby="signing-key-title">
+    <p class="eyebrow">Public key</p>
+    <h2 id="signing-key-title">Signing key</h2>
+    <p class="key-fingerprint" aria-label="PGP fingerprint">6FD3 4635 EBC0 E8A6 5B64 F66F EBB3 61AE ED23 F9AF</p>
+    <dl class="key-meta">
+      <dt>Owner</dt>
+      <dd>PT Algoway System Solution</dd>
+      <dt>Key address</dt>
+      <dd>
+        <code>meutia@algowayss.co</code>
+        <p class="key-note">This is the company’s dedicated signing address, so the <code>.co</code> domain is expected.</p>
+      </dd>
+      <dt>Algorithm</dt>
+      <dd>ed25519 (signing only)</dd>
+      <dt>Valid until</dt>
+      <dd>26 November 2028</dd>
+    </dl>
+    <a class="text-link" href="{{ '/algoway-signing-key.asc' | relative_url }}">Download public key (.asc) <span aria-hidden="true">↓</span></a>
+  </section>
+
+  <section class="entry" aria-labelledby="how-to-verify-title">
+    <p class="eyebrow">Verification steps</p>
+    <h2 id="how-to-verify-title">How to verify a signed document</h2>
+    <ol class="verify-steps">
+      <li>
+        <p>Download the public key and confirm its fingerprint matches this page (<code>6FD3 4635 EBC0 E8A6 5B64 F66F EBB3 61AE ED23 F9AF</code>):</p>
+        <pre><code>gpg --show-keys algoway-signing-key.asc</code></pre>
+      </li>
+      <li>
+        <p>Import the key into your keyring:</p>
+        <pre><code>gpg --import algoway-signing-key.asc</code></pre>
+      </li>
+      <li>
+        <p>Verify the detached signature alongside the document:</p>
+        <pre><code>gpg --verify &lt;document&gt;.pdf.asc &lt;document&gt;.pdf</code></pre>
+        <p class="step-note">The output must report <code>Good signature from "PT Algoway System Solution &lt;meutia@algowayss.co&gt;"</code> with primary key fingerprint <code>6FD3 4635 EBC0 E8A6 5B64 F66F EBB3 61AE ED23 F9AF</code>.</p>
+      </li>
+    </ol>
+    <p>On Windows, use Gpg4win (Kleopatra): import <code>algoway-signing-key.asc</code>, then choose “Decrypt/Verify” on the <code>.asc</code> signature file.</p>
+  </section>
+
+  <section class="entry" aria-labelledby="other-checks-title">
+    <p class="eyebrow">Additional checks</p>
+    <h2 id="other-checks-title">Other checks</h2>
+    <ul class="verify-list">
+      <li>A SHA-256 checksum of each file, listed in the cover email.</li>
+      <li>An OpenTimestamps <code>.ots</code> proof, verifiable at <a href="https://opentimestamps.org" rel="noopener">opentimestamps.org</a>.</li>
+      <li>For Indonesian documents, an e-meterai, verifiable at <a href="https://verification.peruri.co.id" rel="noopener">verification.peruri.co.id</a>.</li>
+    </ul>
+  </section>
+
+  <section class="entry" aria-labelledby="mismatch-title">
+    <h2 id="mismatch-title">If something doesn’t match</h2>
+    <p>Do not rely on the document. Contact us directly through the site’s contact form so we can confirm whether the file is genuine.</p>
+    <a class="text-link" href="{{ '/#contact' | relative_url }}">Contact us <span aria-hidden="true">↗</span></a>
+  </section>
+
+  <section class="entry" lang="id" aria-labelledby="verify-id-title">
+    <p class="eyebrow">Bahasa Indonesia</p>
+    <h2 id="verify-id-title">Cara verifikasi (Bahasa Indonesia)</h2>
+    <ol class="verify-steps">
+      <li>
+        <p>Unduh kunci publik dari tautan di atas dan pastikan sidik jarinya (fingerprint) sama dengan <code>6FD3 4635 EBC0 E8A6 5B64 F66F EBB3 61AE ED23 F9AF</code>:</p>
+        <pre><code>gpg --show-keys algoway-signing-key.asc</code></pre>
+      </li>
+      <li>
+        <p>Impor kunci publik tersebut:</p>
+        <pre><code>gpg --import algoway-signing-key.asc</code></pre>
+      </li>
+      <li>
+        <p>Verifikasi tanda tangan digital dokumen:</p>
+        <pre><code>gpg --verify &lt;dokumen&gt;.pdf.asc &lt;dokumen&gt;.pdf</code></pre>
+        <p class="step-note">Hasilnya harus menampilkan <code>Good signature from "PT Algoway System Solution &lt;meutia@algowayss.co&gt;"</code> dengan fingerprint <code>6FD3 4635 EBC0 E8A6 5B64 F66F EBB3 61AE ED23 F9AF</code>.</p>
+      </li>
+    </ol>
+    <p>Di Windows, gunakan Gpg4win (Kleopatra): impor kunci publik, lalu pilih “Decrypt/Verify” pada berkas <code>.asc</code>.</p>
+    <p>Jika hasil tidak cocok, jangan gunakan dokumen tersebut dan hubungi kami melalui <a class="inline-link" href="{{ '/#contact' | relative_url }}">formulir kontak</a>.</p>
+  </section>
+</section>
